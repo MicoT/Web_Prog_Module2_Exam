@@ -1,3 +1,4 @@
+// made by: mico tongco and chino salansang
 (function(){
     var animating = false;
   

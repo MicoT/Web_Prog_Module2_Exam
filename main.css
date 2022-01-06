@@ -62,14 +62,14 @@ body {
 .cardcontainer {
     position: absolute;
     left: 730px;
-    padding: 20px;
+    padding: 0;
     text-align: center;
     width: 500px;
 }
   
  
 .list .cardlist {
-    margin: 20px;
+    margin: 0;
     padding: 0;
 }
 .list .card {
@@ -98,9 +98,9 @@ body {
     box-shadow:5px 5px #ccc;
     color: #fff;
     background-color: rgb(167, 103, 114);
-    border-radius: 70px;
+    border-radius: 50% 50%;
     font-size: 20px;
-    width: 120px;
+    width: 70px;
     height: 70px;
     line-height: 27px;
     margin-left: 1.0em;
@@ -109,11 +109,11 @@ body {
 }
 
 .cardcontainer .but-nope:hover{
-    background-color: red;
+    background-color: rgb(252, 95, 95);
 }
 
 .cardcontainer .but-yay:hover{
-    background-color: blue;
+    background-color: rgb(235, 27, 27);
 }
 
 .cardcontainer.yes .card {

@@ -3,14 +3,14 @@ header{
     text-align: center;
     top: 0px;
     width: 100%;
-    background-color: #000;
+    background-color: rgb(248, 37, 37);
 }
 
 body {
     display: flex;
     justify-content: center;
     font-family: helvetica, arial, sans-serif;
-    background: #333;
+    background: rgb(243, 113, 113);
     margin-top: 100px;
     color: #ccc;
     font-size: 16px;
@@ -19,11 +19,9 @@ body {
 }
 
 .nobutton:hover .yes {
-  -webkit-animation: yay 0.7s ease-out;
   animation: yay 0.7s ease-out;
 }
 .nobutton:hover .nope {
-  -webkit-animation: nope 0.7s ease-out;
   animation: nope 0.7s ease-out;
 }
 .card {
@@ -34,8 +32,8 @@ body {
   padding-bottom: 20px;
 }
 
-/* Design of a card */
 .card {
+    box-shadow: 5px 10px rgb(196, 184, 184);
     display: flex;
     justify-content: center;
     font-size: 14px;
@@ -44,88 +42,95 @@ body {
     height: 600px;
     background: #666;
     
-  }
-  .cardcontainer {
-    padding: 10px;
+}
+.cardcontainer {
+    position: absolute;
+    left: 730px;
+    padding: 20px;
     text-align: center;
-    width: 200px;
-  }
+    width: 500px;
+}
   
-  /* List functionality */
-  .list .cardlist {
-    margin: 0;
+ 
+.list .cardlist {
+    margin: 20px;
     padding: 0;
-  }
-  .list .card {
+}
+.list .card {
     display: none;
-  }
-  .list .current {
+}
+.list .current {
     display: block;
-  }
+}
   
-  /* Button designs */
-  
-  .but-nope, .but-yay, .nopes, .yays {
-    display: none;
-  }
-  
-  .but-nope, .but-yay,
-  .nopes, .yays {
-    display: inline-block;
-  }
-  
-  .cardcontainer button {
-    background: #0c0;
-    border: none;
-    color: #fff;
-    border-radius: 50% 50%;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    margin: 0 .5em;
-    display: inline-block;
-  }
-  .cardcontainer button:focus {
-    outline: 0;
-    background: #0f0;
-  }
-  .cardcontainer .but-nope {
-    background: #c00;
-  }
-  .cardcontainer .but-nope:focus {
-    outline: 0;
-    background: #f00;
-  }
-  
-  .cardcontainer.yes .card {
-    
-    animation: yay 0.7s ease-out;
-  }
-  .cardcontainer.nope .card {
-    
-    animation: nope 0.7s ease-out;
-  }
 
   
-  @keyframes yay {
-    from {
-      transform: rotate(0deg);
-      opacity: 1;
-    }
-    to {
-      transform: rotate(40deg) translateY(-80px);
-      opacity: 0;
-    }
-  }
+.but-nope, .but-yay, .nopes, .yays {
+    display: none;
+}
+
+.but-nope, .but-yay,
+.nopes, .yays {
+    position: relative;
+    right: 40px;
+    line-height: 80px;
+    display: inline-block;
+    
+}
   
-  @keyframes nope {
+.cardcontainer button {
+    background: #0c0;
+    border-color: black;
+    color: #fff;
+    border-radius: 50% 50%;
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+    line-height: 25px;
+    margin-left: 1.0em;
+    margin-right: 1.0em;
+    display: inline-block;
+}
+.cardcontainer button:focus {
+    outline: 0;
+    background: #0f0;
+}
+  
+.cardcontainer .but-nope {
+    background: #c00;
+}
+.cardcontainer .but-nope:focus {
+    outline: 0;
+    background: #f00;
+}
+  
+.cardcontainer.yes .card {
+    animation: yay 0.7s ease-out;
+}
+.cardcontainer.nope .card {
+    animation: nope 0.7s ease-out;
+}
+
+  
+@keyframes yay {
     from {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: rotate(40deg) translateY(-80px);
+        opacity: 0;
+    }
+}
+  
+@keyframes nope {
+    from {
+        transform: rotate(0deg);
       opacity: 1;
     }
     to {
-      transform: rotate(-40deg) translateY(-80px);
-      opacity: 0;
+        transform: rotate(-40deg) translateY(-80px);
+        opacity: 0;
     }
-  }
+}
   

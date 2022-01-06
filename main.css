@@ -2,6 +2,7 @@
 html{
     font-family: 'Hind Siliguri', sans-serif;
     font-family: 'Spline Sans', sans-serif;
+    height: auto;
 }
 header{
     position: absolute;
@@ -13,12 +14,10 @@ header{
 
 footer{
     color: rgb(241, 185, 185);
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    height: 20px;
-    width: 100%;
-    background-color: rgb(174, 17, 236);
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
 }
 
 body {
@@ -31,6 +30,9 @@ body {
     font-size: 16px;
     padding: 10px;
     
+}
+h1{
+    text-decoration: underline;
 }
 
 .nobutton:hover .yes {
@@ -61,7 +63,7 @@ body {
 
 .cardcontainer {
     position: absolute;
-    left: 730px;
+    right: 400px;
     padding: 0;
     text-align: center;
     width: 500px;
@@ -92,7 +94,29 @@ body {
     display: inline-block;
     
 }
-  
+
+.list-container{
+    box-shadow: 5px 5px grey;
+    border-color: rgb(87, 4, 4);
+    border-radius: 10px;
+    position: relative;
+    background-color: rgb(245, 0, 171);
+    color: #fff;
+    text-align: center;
+    right: 300px;
+    width: 380px;
+    height: auto;
+    padding: 20px;
+}
+.list-img {
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    margin-left: 5%;
+    margin-right:5%;
+}
+
+
 .cardcontainer button {
     border-color: rgb(201, 59, 59);
     box-shadow:5px 5px #ccc;
@@ -122,7 +146,6 @@ body {
 .cardcontainer.nope .card {
     animation: nope 0.7s ease-out;
 }
-
   
 @keyframes yay {
     from {

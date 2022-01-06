@@ -114,3 +114,69 @@
    var out = '<li class="card current"><img src="/imgs/last-card.png" height="600px" width="400px"></li>';
    list.innerHTML = out;
  });
+
+let heart = document.getElementById('heart');
+let cross = document.getElementById('cross');
+
+
+let currNum = 0;
+
+let animalList = [];
+let imglist = [];
+
+let imgFolder = 'imgs/';
+let aniImg = ['/imgs/1p.jpg','/imgs/2p.jpg','/imgs/3p.jpg','/imgs/4p.jpg','/imgs/5p.jpg','/imgs/6p.jpg','/imgs/7p.jpg','/imgs/8p.jpg','/imgs/9p.jpg','/imgs/10p.jpg'];
+let petNames = ['Osman | 24 years old','Bronwen | 20 years old','Luke | 25 years old','Aairaz | 26 years old','Callam | 20 years old','Elisha | 21 years old','Maisey | 23 years old','Leigha | 22 years old','Fabian | 25 years old', 'Nibiha | 23 years old'];
+
+function random () {
+    let randNum = Math.floor((Math.random() * aniImg.length));
+    pet.src = aniImg[randNum];
+    petName.innerHTML = petNames[randNum];
+    currNum = randNum;
+}
+
+let counter = 0;
+
+cross.onclick =function(){
+  if(counter<10){
+    petNames.splice(currNum, 1);
+    aniImg.splice(currNum, 1);
+    random();
+    counter+=1;
+  }
+}
+
+heart.onclick = function() {
+
+    if(counter<10){
+        addList(aniImg[currNum],petNames[currNum]);
+
+        petNames.splice(currNum, 1);
+        aniImg.splice(currNum, 1);
+        random();
+        counter+=1;
+    }
+}
+
+function addList(animalface,animal ){
+    var animalface=animalface;
+    var animal=animal;
+
+    const lead=document.getElementById('lead');
+    const newDiv=document.createElement('div');
+    lead.appendChild(newDiv);
+    newDiv.classList.add('selected');
+
+    const addedImg=document.createElement('img');
+    addedImg.classList.add('list-img');
+    addedImg.src=animalface;
+    newDiv.appendChild(addedImg);
+
+    const addedAnimal=document.createElement('h3');
+    addedAnimal.classList.add('list')
+    addedAnimal.innerHTML=animal;
+    newDiv.appendChild(addedAnimal);
+
+    const addedLine=document.createElement('hr');
+    newDiv.appendChild(addedLine);  
+}

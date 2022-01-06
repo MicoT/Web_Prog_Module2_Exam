@@ -1,16 +1,30 @@
+html{
+    font-family: 'Hind Siliguri', sans-serif;
+    font-family: 'Spline Sans', sans-serif;
+}
 header{
     position: absolute;
     text-align: center;
     top: 0px;
     width: 100%;
-    background-color: rgb(248, 37, 37);
+    background-color: rgb(174, 17, 236);
+}
+
+footer{
+    color: rgb(241, 185, 185);
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    background-color: rgb(174, 17, 236);
 }
 
 body {
     display: flex;
     justify-content: center;
     font-family: helvetica, arial, sans-serif;
-    background: rgb(243, 113, 113);
+    background-image: url('/imgs/bg.jpg');
     margin-top: 100px;
     color: #ccc;
     font-size: 16px;
@@ -25,7 +39,7 @@ body {
   animation: nope 0.7s ease-out;
 }
 .card {
-  background: powderblue;
+  background: rgb(107, 218, 233);
   color: #000;
 }
 .list ul.cardlist {
@@ -36,13 +50,14 @@ body {
     box-shadow: 5px 10px rgb(196, 184, 184);
     display: flex;
     justify-content: center;
-    font-size: 14px;
+    font-size: 20px;
     text-align:center;
     width: 400px;
     height: 600px;
-    background: #666;
-    
+    background: rgb(238, 48, 48);
+    color: rgb(228, 149, 149);
 }
+
 .cardcontainer {
     position: absolute;
     left: 730px;
@@ -63,47 +78,43 @@ body {
     display: block;
 }
   
-
-  
 .but-nope, .but-yay, .nopes, .yays {
     display: none;
 }
 
 .but-nope, .but-yay,
 .nopes, .yays {
+    margin-top: 10px;
     position: relative;
     right: 40px;
-    line-height: 80px;
+    line-height: 10px;
     display: inline-block;
     
 }
   
 .cardcontainer button {
-    background: #0c0;
-    border-color: black;
+    border-color: rgb(201, 59, 59);
+    box-shadow:5px 5px #ccc;
     color: #fff;
-    border-radius: 50% 50%;
-    font-size: 40px;
-    width: 70px;
+    background-color: rgb(167, 103, 114);
+    border-radius: 70px;
+    font-size: 20px;
+    width: 120px;
     height: 70px;
-    line-height: 25px;
+    line-height: 27px;
     margin-left: 1.0em;
     margin-right: 1.0em;
     display: inline-block;
 }
-.cardcontainer button:focus {
-    outline: 0;
-    background: #0f0;
+
+.cardcontainer .but-nope:hover{
+    background-color: red;
 }
-  
-.cardcontainer .but-nope {
-    background: #c00;
+
+.cardcontainer .but-yay:hover{
+    background-color: blue;
 }
-.cardcontainer .but-nope:focus {
-    outline: 0;
-    background: #f00;
-}
-  
+
 .cardcontainer.yes .card {
     animation: yay 0.7s ease-out;
 }

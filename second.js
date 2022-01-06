@@ -110,9 +110,6 @@
  document.body.addEventListener('deckempty', function(ev) {
    var container = ev.detail.container;
    var list = container.querySelector('.cardlist');
-   var out = '<li class="card current">#1</li>';
-   for (var i = 2; i < 6; i++) {
-     out += '<li class="card">#' + i + '</li>';
-   }
+   var out = '<li class="card current"><img src="/imgs/last-card.png" height="600px" width="400px"></li>';
    list.innerHTML = out;
  });

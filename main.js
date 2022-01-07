@@ -125,7 +125,7 @@ let animalList = [];
 let imglist = [];
 
 let imgFolder = 'imgs/';
-let aniImg = ['/imgs/1p.jpg','/imgs/2p.jpg','/imgs/3p.jpg','/imgs/4p.jpg','/imgs/5p.jpg','/imgs/6p.jpg','/imgs/7p.jpg','/imgs/8p.jpg','/imgs/9p.jpg','/imgs/10p.jpg'];
+let aniImg = ['imgs/1p.jpg','imgs/2p.jpg','imgs/3p.jpg','imgs/4p.jpg','imgs/5p.jpg','imgs/6p.jpg','imgs/7p.jpg','imgs/8p.jpg','imgs/9p.jpg','imgs/10p.jpg'];
 let petNames = ['Osman | 24 years old','Bronwen | 20 years old','Luke | 25 years old','Aairaz | 26 years old','Callam | 20 years old','Elisha | 21 years old','Maisey | 23 years old','Leigha | 22 years old','Fabian | 25 years old', 'Nibiha | 23 years old'];
 
 function random () {
